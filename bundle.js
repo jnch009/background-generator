@@ -17160,16 +17160,12 @@ function setRandomColors() {
 }
 
 function displayGradientProperty() {
-  body.style.background =
-    "linear-gradient(to right, " +
-    color1.color.hexString +
-    "," +
-    color2.color.hexString +
-    ")";
-  css.textContent = body.style.background + ";";
+  const gradientString = `linear-gradient(to right, ${color1.color.rgbString}, ${color2.color.rgbString})`;
+  body.style.background = gradientString;
+  css.textContent = `${gradientString};`;
 }
 
-function linearGradient(color) {
+function linearGradient() {
   displayGradientProperty();
 }
 
